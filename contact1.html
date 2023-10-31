@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family First life PDX</title>
+  <link rel="shortcut icon" href="icons/insurance.png">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./style.css"> 
+  <script src="land.js" charset="utf-8"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+  <body>
+
+  
+    <header>
+
+
+      <nav class="navbar olori 
+       navbar-dark hide">
+          <div class="container-fluid">
+            <div id="brand-div" class="navbar-brand">
+              <a href="./index.html" id="brand">F.F.L</a>
+              
+
+              <button type="button" class="btn" 
+              data-toggle="modal" data-target="#cart">
+                <i class="text-light fa fa-shopping-cart cart-show"></i> (<span
+                 class="total-count text-light"></span>)</button>
+
+              <div id="btn" class="btn">
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+                  <div class="line3"></div>
+               </div>
+              </div>
+  
+                  <div class="navbar-nav mx-auto" id="drop">
+                      <div class="profile-div text-center">
+                        <div class="">
+                          <i class="fa fa-users" 
+                          style="font-size: 50px; color: #fff;"></i>
+                        </div>
+                        <a  
+                        style="color: #fff; 
+                        font-weight: 700;" 
+                        onclick="clickreg()">Register</a>
+                      </div>
+                      
+                      <hr class="hrr">
+  
+                      <a class="nav-link" aria-current="page" 
+                      href="./index.html">Home</a>
+                      <button class="nav-link d-dp tono"
+                       aria-current="page">Plans
+                         <i class="fa fa-caret-down"></i>
+                      </button>
+                    <div class="dp">
+                      <i class="fa fa-times 
+                      cancel p-1"></i>
+                      <a href="./familyplans.html">Family PLans</a>
+                      <a href="./business.html">Business Plans</a>
+                    </div>  
+                    <a class="nav-link" aria-current="page"
+                     href="./faq.html">FAQ</a>
+                      <a class="nav-link active" aria-current="page"
+                       href="./contact1.html">Contact</a>
+                      <button class="nav-link tono" onclick="clicklog()">Login</button>  
+                      
+                      <button type="button" class="btn " 
+                      data-toggle="modal" data-target="#cart">
+                        <i class="text-light fa fa-shopping-cart cart-none"></i> (<span
+                         class="total-count text-light"></span>)</button>
+                    </div>
+                  
+  
+                    <div class="btn-reg">
+                      <button class="btn btn-light"
+                               style="font-weight: 700;"
+                               aria-current="page" onclick="clickreg()">Become a member</button>
+         </div>
+         
+         
+                           <div>        
+           <!-- <li class="my-auto">
+             <img width="30" src="icons/worldwide.png" 
+             class="visible" id="img" alt=""> </li> -->
+           </div>
+                     </div>
+                 </div>
+             </nav>
+           </header>
+         
+         <div class="col-md-5 mx-auto" id="clickdev">
+         
+         <i class="fa fa-times" id="golog" onclick="golog()"></i>
+         
+           <h1 class="mx-2 text-center">Sign In</h1>
+           <p style="color: red;" 
+           id="errorL">Form can't be empty</p>
+           <form >
+             <div class="form-group mt-5">
+               <label for="email" class="ml-2 my-0">Email</label>
+               <input type="email" id="email2"
+                class="ml-2" 
+                id="email2" name="email">
+             </div>
+             <div class="form-group">
+               <label for="password" class="ml-2 my-0">Password</label>
+               <input type="password" class="ml-2" id="password2" 
+               name="password">
+             </div>
+         <button type="submit" id="Logbtn" 
+         class="btn
+          btn-primary w-100 text-white mb-2"
+      >Log In</button>
+           </form>
+         
+           <div class="text-center pt-4">
+                 <div class="col-5 mx-auto downcon">
+                 <p>New member?</p>
+                 <button 
+                 class="btn btn-primary" onclick="clickreg()">Signup</button>
+                 </div>
+             </div>
+         </div>
+         <!-- log -->
+         
+         
+         
+         
+         <div class="col-md-5 mx-auto" id="clickdev2">
+         
+           <i class="fa fa-times" id="golog" onclick="golog()"></i>
+           
+             <h1 class="mx-2 text-center">Sign Up</h1>
+             <p style="color: red;" 
+             id="error"></p>
+             <form>
+               <div class="form-group mt-5">
+                <label for="name" class="ml-2 my-0">Username</label>
+                <input type="text" id="name"
+                 class="ml-2" name="name" required>
+
+                 <p style="color: red;" class="py1"
+                 id="errorU"></p>
+               </div>
+         
+               <div class="form-group">
+                 <label for="email" class="ml-2 my-0">Email</label>
+                 <input type="email" id="email"
+                  class="ml-2" 
+                  id="email" name="email" required>
+                           <p style="color: red;" class="py1"
+                 id="errorE"></p>
+                 </div>
+                 <div class="form-group">
+                   <label for="number" class="ml-2 my-0">Age</label>
+                   <input type="number" class="ml-2" id="age" 
+                   name="number" required>
+                   <p style="color: red;" class="py1"
+                   id="errorA"></p>
+               </div>
+               <div class="form-group">
+                 <label for="password" class="ml-2 my-0">Password</label>
+                 <input type="password" class="ml-2" id="password" 
+                 name="password" required>
+
+                 <p style="color: red;" class="py1"
+                 id="error2"></p>
+             </div>
+             <div class="form-group">
+               <label for="password" class="ml-2 my-0">Confirm Password</label>
+               <input type="password" class="ml-2" id="Cpassword" 
+               name="password" required>
+                        <p style="color: red;" class="py1"
+                 id="error2"></p>
+           </div>
+           <button
+           class="btn
+            btn-primary w-100 mb-2" id="ReBtn">Sign Up</button>
+             </form>
+           
+         
+           </div>
+         
+         
+         
+         <!-- reg -->
+
+<section id="carry">
+         
+      <div class="first-con faq-con"
+      style="background-color: navy;">
+            <div class="container text-light">
+              <div class="row" 
+              data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+            style="justify-content: space-evenly;">
+              <div class="col-md-5">
+                <h1>Contact Us</h1>
+                <p>Need Help?, Or Do You Have A Question For Us?, Or Give Us A <a href="#">Feedback</a></p>
+              </div>
+              <div class="col-md-5">
+                <img width="200"src="icons/contact.png" alt="">
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+<section>
+  <div class="container mt-4 conboard p-2">
+
+    <div class="row" style="justify-content: space-between;">
+      <div class="col-md-5 addresses">
+      <div class="py-2">
+        <div class="icon">
+        <img width="30"src="icons/placeholder.png" alt=""></div>
+        <div class="text">
+        <h1>Address</h1>
+        <p class="box-p">0000 Aries Street,
+          Agoura Hills, <br> Carlifornia</p>
+        </div>
+        <div class="border"></div>
+        <div class="py-2">
+          <div class="icon"> 
+              <img width="30"src="icons/arroba.png" 
+              alt=""></div>
+           <div class="text">
+            <h1>Email</h1>
+            <p class="box-p">FamilyfirstLifePdx@gmail.com</p>
+        </div>
+        
+        <div class="border"></div>
+            <div class="">
+                <div class="icon"> 
+                  <img width="30"src="icons/call.png" 
+                  alt="">
+                </div>
+                    <div class="text">
+               <h1>Phone</h1>
+                <p class="box-p">971-280-9393</p>
+            </div>
+            </div>
+    </div>
+  </div>
+  </div>
+  
+    <div class="col-md-6 pt-3">
+<form action="">
+  <h1>Send A Message</h1>
+  <div class="input_box my-2 p-2">
+    <input type="text" name="" 
+    class="form-control"
+    placeholder="Your Name*" required 
+    id="">
+    <!-- <input type="text" name="Name" 
+  oninvalid="this.setCustomValidity('Please Enter Your Name')" 
+  oninput="this.setCustomValidity('')"> -->
+  </div>
+  
+  <div class="input_box my-2 p-2">
+  <input type="Email" name="email" 
+  placeholder="Email*" required class="input-group"
+   oninvalid="this.setCustomValidity('Please Enter Your Email')" oninput="this.setCustomValidity('')">
+  </div>
+  
+  <!-- <div class="input_box my-2 p-2">
+  <input type="tel" name="phone" value=""
+   required="required" placeholder="Phone*"
+  required class="input-group"
+  oninvalid="this.setCustomValidity('Please Enter Your Phone')" 
+  oninput="this.setCustomValidity('')"
+  pattern="[1-9]{1}[0-9]{9}">
+  </div> -->
+  
+  <div class="input_box my-2 p-2">
+    <textarea required="required" class="form-control
+    placeholder="Your Message....."
+    required 
+    oninvalid="this.setCustomValidity('Please Enter Your Message')" 
+    oninput="this.setCustomValidity('')"></textarea>
+  </div>
+  
+  <div class="input_box p-2">
+  <input type="submit" class="btn btn-primary" 
+  name="" value="send">
+  </div>
+</form>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="border"></div>
+<div class="container4 non_visible" id="container4" style="display:none;">
+<div style="padding-top:200px;"class="top_conatact">
+<button type="button" name="button" onclick="back()">Cancel</button>
+</div>
+
+
+  <div id="contact_form">
+    <form class="" action="land.php" method="post">
+
+
+
+
+    </form>
+  </div>
+
+</div> -->
+
+<footer style="background-color: navy;">
+  <div class="text-center">
+    <div class="row mx-auto socials p-3">
+      <div class="col-3">
+  <i class="fa fa-instagram text-light"></i>
+      </div>
+      <div class="col-3">
+        <i class="fa fa-twitter text-light"></i>
+      </div>
+      <div class="col-3">
+        <i class="fa fa-facebook text-light"></i>
+      </div>
+    </div>
+  <h6 class="text-center text-light">
+    <a href="">Privacy & Policy</a> | <a href="">Terms and Conditions</a></h6>
+  <h6 class="pt-1 text-light">&copy Family First Life PXD 2023 All Rights Reserved</h6>
+  </footer>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button class="clear-cart btn btn-primary">Clear Cart</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<!--  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+  <script src="./land.js"></script>
+<script src="./bootstrap/js/jquery.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

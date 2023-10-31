@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family First life PDX</title>
+  <link rel="shortcut icon" href="icons/insurance.png">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./style.css"> 
+  <script src="land.js" charset="utf-8"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  
+  <header>
+    <nav class="navbar olori 
+     navbar-dark hide">
+        <div class="container-fluid">
+          <div id="brand-div" class="navbar-brand">
+            <a href="./index.html" id="brand">F.F.L</a>
+            
+
+            <button type="button" class="btn " 
+            data-toggle="modal" data-target="#cart">
+              <i class="text-light fa fa-shopping-cart cart-show"></i> (<span
+               class="total-count text-light"></span>)</button>
+
+            <div id="btn" class="btn">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+             </div>
+             
+            </div>
+
+  
+                  <div class="navbar-nav mx-auto" id="drop">
+                      <div class="profile-div text-center">
+                        <div class="">
+                          <i class="fa fa-users" 
+                          style="font-size: 50px; color: #fff;"></i>
+                        </div>
+                        <a 
+                        style="color: #fff; 
+                        font-weight: 700;" 
+                        onclick="clickreg()">Register</a> 
+                      </div>
+                    
+                    <hr class="hrr">
+
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <button class="nav-link d-dp tono"
+                     aria-current="page">Plans
+                       <i class="fa fa-caret-down"></i>
+                    </button>
+                  <div class="dp">
+                    <i class="fa fa-times 
+                    cancel p-1"></i>
+                    <a href="./familyplans.html">Family PLans</a>
+                    <a href="./business.html">Business Plans</a>
+                  </div>
+
+                    <a class="nav-link" aria-current="page"
+                     href="./faq.html">FAQ</a>
+                    <a class="nav-link" aria-current="page" 
+                    href="./contact1.html">Contact</a>
+                    <button class="nav-link tono" 
+                    id="logbtn" onclick="clicklog()">Login</button>  
+        
+                    <button type="button" class="btn" 
+                    data-toggle="modal" data-target="#cart">
+                      <i class="text-light fa fa-shopping-cart cart-none"></i> (<span
+                       class="total-count text-light"></span>)</button>
+                  </div>
+                  <div class="btn-reg">
+                    <button class="btn btn-light"
+                             style="font-weight: 700;"
+                             aria-current="page" onclick="clickreg()">Become a member</button>
+       </div>
+       
+       
+                         <div>        
+         <!-- <li class="my-auto">
+           <img width="30" src="icons/worldwide.png" 
+           class="visible" id="img" alt=""> </li> -->
+         </div>
+                   </div>
+               </div>
+           </nav>
+         </header>
+       
+
+<!-- shh -->
+
+<!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button class="clear-cart btn btn-primary">Clear Cart</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<!-- shh -->
+       <div class="col-md-5 mx-auto" id="clickdev">
+       
+       <i class="fa fa-times" id="golog" onclick="golog()"></i>
+       
+         <h1 class="mx-2 text-center">Sign In</h1>
+         <p style="color: red;" 
+         id="errorL">Form can't be empty</p>
+         <form >
+           <div class="form-group mt-5">
+             <label for="email" class="ml-2 my-0">Email</label>
+             <input type="email" id="email2"
+              class="ml-2" 
+              id="email2" name="email">
+           </div>
+           <div class="form-group">
+             <label for="password" class="ml-2 my-0">Password</label>
+             <input type="password" class="ml-2" id="password2" 
+             name="password">
+           </div>
+       <button type="submit" id="Logbtn" 
+       class="btn
+        btn-primary w-100 text-white mb-2"
+    >Log In</button>
+         </form>
+       
+         <div class="text-center pt-4">
+               <div class="col-5 mx-auto downcon">
+               <p>New member?</p>
+               <button 
+               class="btn btn-primary" onclick="clickreg()">Signup</button>
+               </div>
+           </div>
+       </div>
+       <!-- log -->
+       
+       
+       
+       
+       <div class="col-md-5 mx-auto" id="clickdev2">
+       
+         <i class="fa fa-times" id="golog" onclick="golog()"></i>
+         
+           <h1 class="mx-2 text-center">Sign Up</h1>
+           <p style="color: red;" 
+           id="error"></p>
+           <form>
+             <div class="form-group mt-5">
+              <label for="name" class="ml-2 my-0">Username</label>
+              <input type="text" id="name"
+               class="ml-2" name="name" required>
+
+               <p style="color: red;" class="py1"
+               id="errorU"></p>
+             </div>
+       
+             <div class="form-group">
+               <label for="email" class="ml-2 my-0">Email</label>
+               <input type="email" id="email"
+                class="ml-2" 
+                id="email" name="email" required>
+                         <p style="color: red;" class="py1"
+               id="errorE"></p>
+               </div>
+               <div class="form-group">
+                 <label for="number" class="ml-2 my-0">Age</label>
+                 <input type="number" class="ml-2" id="age" 
+                 name="number" required>
+                 <p style="color: red;" class="py1"
+                 id="errorA"></p>
+             </div>
+             <div class="form-group">
+               <label for="password" class="ml-2 my-0">Password</label>
+               <input type="password" class="ml-2" id="password" 
+               name="password" required>
+
+               <p style="color: red;" class="py1"
+               id="error2"></p>
+           </div>
+           <div class="form-group">
+             <label for="password" class="ml-2 my-0">Confirm Password</label>
+             <input type="password" class="ml-2" id="Cpassword" 
+             name="password" required>
+                      <p style="color: red;" class="py1"
+               id="error2"></p>
+         </div>
+         <button
+         class="btn
+          btn-primary w-100 mb-2" id="ReBtn">Sign Up</button>
+           </form>
+         
+       
+         </div>
+       
+       
+       
+       <!-- reg -->
+
+       <section id="carry">
+
+<div class="first-con" 
+style="background-color: navy;">
+  <ul class="box_area">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    </ul>
+
+
+<div class="container firstdiv py-5">
+  <div class="row" 
+  data-aos="fade-up"
+  data-aos-easing="linear"
+  data-aos-duration="1200">
+    <div class="col-md-5 my-auto text-white">
+      <h1 class="t-type">F.First Life PXD</h1>
+      
+  <p class="py-4">
+    Welcome To Family First Life PDX, Your First For A Life Insurance,
+     Our Goal Is To Offer You The Best Insurance Deals At Affordable Rate.
+  </p>
+
+    <a href=".\contact.html" class="btn btn-primary">Get a qoute</a>
+
+    </div>
+    <div class="col-md-5">
+        <img class="img-fluid" src="icons/family.png" alt="">
+    </div>
+  </div>
+</div>
+
+</div>
+
+<section class="pic-bg">
+  <div class="container">
+<div class="row justify-content-between">
+  <div class="col-md-5">
+    <h2>Consulting Agency For Your Business</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde 
+      \explicabo placeat sed. Officia libero, laboriosam impedit, 
+      quisquam ad veniam debitis beatae facilis maiores sequi at 
+      laborum quaerat quis, distinctio deserunt molestias vel. 
+      Dolores debitis voluptate, sequi modi dolorem rem, earum numquam, 
+      mollitia expedita voluptatum vero distinctio iusto voluptatibus aliquam dolore.</p>
+  </div>
+  <div class="col-md-5 py-auto">
+<div class="rouned-2 numbers">
+<p>Call Us: 000-000-0000</p>
+<p>Whatsapp: 000-000-0000</p>
+<p>Email: 000-000-0000</p>
+</div>
+  </div>
+</div>
+  </div>
+</section>
+
+<div class="container my-5" id="services">
+  <div class="text-center">
+    <img width="150"src="icons/what.png" alt="">
+    <h2>What we provide</h2>
+  </div>
+  <div class="border"></div>
+    <p class="py-1 text-center"><b>Lorem ipsum dolor sit amet 
+      consectetur, adipisicing elit. Quaerat doloribus maxime 
+      quis accusantium quos Quaerat doloribus maxime Quaerat doloribus maxime 
+      assumenda voluptatem distinctio cupiditate placeat laudantium.</b></p>
+  <p class="py-1 text-center"><b>We Provide A Wide Range Of Life Insurance 
+    Services, Including The Following:</b></p>
+
+
+    
+<div class="row py-5 serall"
+data-aos="fade-up"
+data-aos-easing="linear"
+data-aos-duration="1100">
+<div class="col-md-3 text-center">
+<div class="text-center card ser-cards text-white p-4"
+ style="background-color: navy;">
+  <img width="100px" class="mx-auto" src="icons/accepted.png" alt="">
+  <h5 class="">Whole & Term Life</h5>
+</div>
+</div>
+<div class="col-md-3 text-center">
+  <div class="text-center card ser-cards text-white p-4"
+   style="background-color: navy;">
+    <img width="100px" class="mx-auto"
+     src="icons/mortgage.png" alt="">
+    <h5 class=""> Mortgage Protection</h5>
+  </div>
+  </div>
+  <div class="col-md-3 text-center">
+    <div class="text-center card ser-cards text-white p-4"
+     style="background-color: navy;">
+      <img width="100px" class="mx-auto"
+       src="icons/expenses.png" alt="">
+      <h5 class="">Final Expense</h5>
+    </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+<section>
+  <div class="container justify-content-between p-5">
+    <div class="row">
+      <div class="col-md-5">
+  <div>
+    <img src="./icons/worldwide.png" width="200" id="img" alt="">
+  </div>
+      </div>
+      <div class="col-md-5">
+  <h1>All over the world</h1>
+  <p class="pt-1 pb-1 text-primary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, repellendus.</p>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Quo sapiente consequatur facilis quod aspernatur eaque 
+    similique est quisquam voluptatibus, aperiam dolor minima dolore, 
+    odit ipsum reprehenderit rerum nam quia soluta, maxime qui? 
+    Tenetur aspernatur veniam obcaecati saepe officiis, autem 
+    voluptatum numquam unde dolorum 
+    perspiciatis aliquam ex culpa iste architecto itaque?</p>
+  </div>
+    </div>
+  </div>
+  </section>
+
+
+  <div class="container mb-5 best">
+    <div class="p-4">
+      <h1 class="text-center pb-2">SAVE ON QUALITY INSURANCE</h1>
+        <p class="text-center">Lorem ipsum dolor sit amet<b class="text-primary"> Call : 00-000-0000</b></p>
+        <div class="border"></div>
+        <div class="row omoeh f-row text-center">
+<div class="col-md-3">
+<i class="fa fa-car notu"></i>
+<h4>Lorem Ipsum</h4>
+</div>
+<div class="col-md-3">
+  <img width="100" src="icons/036-worker.png" alt="">
+<h4>Lorem Ipsum</h4>
+</div>
+<div class="col-md-3">
+  <img src="./icons/customer.png" width="100" alt="">
+  <h4>Lorem Ipsum</h4>
+</div>
+      </div>
+
+      <div class="row text-center f-row2 omoeh">
+        <div class="col-md-3">
+          <img src="./icons/contact.png" width="100" alt="">
+          <h4>Lorem Ipsum</h4>
+        </div>
+        <div class="col-md-3">
+          <img src="./icons/034-curriculum.png" width="100" alt="">
+          <h4>Lorem Ipsum</h4>
+        </div>
+        <div class="col-md-3">
+          <img src="./icons/expense2.png" width="100" alt="">
+          <h4>Lorem Ipsum</h4>
+        </div>
+      </div>
+      <div class="border"></div>
+    </div>
+  </div>
+
+<!-- 
+
+  <div class="caro my-5" style="background-color: navy;" 
+  id="caro">
+<h2 class="text-center pt-4 text-white">Why Family First Life?</h2>
+    <div id="myCarousel" class="carousel slide"
+     data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <h1>Best Insurance</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Fast and Afordable</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+
+          <div class="container">
+            <div class="carousel-caption text-right">
+              <h1>Giving you peace of mind.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+</div> -->
+
+
+<div class="container">
+  <div class="row testi">
+    <div class="col-md-6">
+<img src="./icons/activities.png" alt="">
+    </div>
+    <div class="col-md-6 p-4">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
+      <p class="pt-1 pb-1 text-primary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, repellendus.</p>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Quo sapiente consequatur facilis quod aspernatur eaque 
+        similique est quisquam voluptatibus, aperiam dolor minima dolore, 
+        odit ipsum reprehenderit rerum nam quia soluta, maxime qui? 
+        Tenetur aspernatur veniam obcaecati saepe officiis, autem 
+        voluptatum numquam unde dolorum 
+        perspiciatis aliquam ex culpa iste architecto itaque?</p>
+        <p class="pt-3">Michael Jones</p>
+    </div>
+  </div>
+</div>
+
+
+<section>
+<div class="container justify-content-between p-5">
+  <div class="row">
+    <div class="col-md-5">
+<div>
+  <img src="./icons/business.png" width="200" alt="">
+</div>
+    </div>
+    <div class="col-md-5">
+<h1>Who we are</h1>
+<p class="pt-1 pb-1 text-primary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, repellendus.</p>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+  Quo sapiente consequatur facilis quod aspernatur eaque 
+  similique est quisquam voluptatibus, aperiam dolor minima dolore, 
+  odit ipsum reprehenderit rerum nam quia soluta, maxime qui? 
+  Tenetur aspernatur veniam obcaecati saepe officiis, autem 
+  voluptatum numquam unde dolorum 
+  perspiciatis aliquam ex culpa iste architecto itaque?</p>
+</div>
+  </div>
+</div>
+</section>
+
+
+<div class="container"
+data-aos="fade-up"
+data-aos-easing="linear"
+data-aos-duration="1100">
+  <div class="more_heading">
+    <h2 style="color:#000;
+   text-align:center;padding-top:40px;">
+   More About Us</h2>
+      </div>
+      <div class="border"></div>
+
+<div class="row serv">
+  <div class="col-md-6">
+    <p style="font-weight: 600;">Family First Life Provides You With The Best Life Insurance At Affordable Price, We Are Fast, Trusted, And You Should Make The Right Choice About Your Insurance We Get Back At Our Customers On Time;
+      Our Services Is Not Only Life Insurance  We Also  Offer, Final Expense,Mortgage Protection, Whole And Term Life;
+   So Contact Us And Our Agents Will Get Back At You Quickly
+  </p>
+  </div>
+
+  <div class="col-md-5">
+    <div id="">
+      <img width="400" class="img-fluid"
+       src="icons/business-p.png"  alt="">
+  </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer style="background-color: navy;">
+<div class="container text-center">
+  <div class="row mx-auto socials p-3">
+    <div class="col-3">
+<i class="fa fa-instagram text-light"></i>
+    </div>
+    <div class="col-3">
+      <i class="fa fa-twitter text-light"></i>
+    </div>
+    <div class="col-3">
+      <i class="fa fa-facebook text-light"></i>
+    </div>
+  </div>
+<h6 class="text-center text-light">
+  <a href="">Privacy & Policy</a> | <a href="">Terms and Conditions</a></h6>
+<h6 class="py-1 text-light">&copy Family First Life PXD 2023 All Rights Reserved</h6>
+</footer>
+</section>
+
+<!--  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+  <script src="./land.js"></script>
+<script src="./bootstrap/js/jquery.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
